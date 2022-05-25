@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import users from "constants/api/users";
 import { withRouter } from "react-router-dom";
-import { useDispatch } from "react-redux";
 
 import useForm from "helpers/hooks/useForm";
 import fieldErrors from "helpers/fieldError";
@@ -10,8 +9,6 @@ import Select from "components/Form/Select";
 import Input from "components/Form/Input";
 
 function RegisterForm({ history }) {
-  const dispatch = useDispatch();
-
   const [{ name, email, password, profession, otherProfession }, setState] =
     useForm({
       name: "",
