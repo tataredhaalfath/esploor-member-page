@@ -31,7 +31,7 @@ function EmptyState() {
           target="_blank"
           rel="noopener noreferrer"
           className="bg-orange-500 hover:bg-orange-400 transition-all duration-200 focus:outline-none shadow-inner text-white px-6 py-3 mt-5"
-          href={`${process.env.REACT_APP_FRONTPAGE_URL}/library`}
+          href={`${process.env.REACT_APP_FRONTPAGE_URL}/courses`}
         >
           Cari kelas
         </a>
@@ -78,7 +78,7 @@ export default function MyClass() {
                   </p>
                 </section>
                 <section className="flex-col mt-8">
-                  <div className="flex justify-start items-center -mx-4">
+                  <div className="flex flex-wrap justify-start items-center -mx-4">
                     {Object.values(COURSES.data)?.map?.((item, index) => {
                       return (
                         <ListClassItem

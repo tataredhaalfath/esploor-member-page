@@ -1,0 +1,3 @@
+export const STATUS_ORDERS = "STATUS_COURSES";
+export const FETCH_ORDERS = "FETCH_COURSES";
+export const MESSAGE_ORDER = "MESSAGE_ORDER";

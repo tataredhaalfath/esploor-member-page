@@ -11,6 +11,8 @@ function Header({ onLight, location }) {
       ? `/register`
       : `/login`;
   const textCTA = location.pathname.indexOf("/login") > -1 ? "Daftar" : "Masuk";
+  const linkHome = `${process.env.REACT_APP_FRONTPAGE_URL}`;
+  const linkCourses = `${process.env.REACT_APP_FRONTPAGE_URL}/courses`;
   return (
     <header className="flex justify-between items-center">
       <div style={{ height: 50 }}>
@@ -18,28 +20,30 @@ function Header({ onLight, location }) {
       </div>
       <ul className="flex">
         <li>
-          <Link
-            to="/"
+          <a
+            href={linkHome}
+            rel="noopener noreferrer"
             className={[
               linkColor,
               "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium",
             ].join(" ")}
           >
             Home
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
-            to="/"
+          <a
+            href={linkCourses}
+            rel="noopener noreferrer"
             className={[
               linkColor,
               "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium",
             ].join(" ")}
           >
-            Pricing
-          </Link>
+            Courses
+          </a>
         </li>
-        <li>
+        {/* <li>
           <Link
             to="/"
             className={[
@@ -60,7 +64,7 @@ function Header({ onLight, location }) {
           >
             Story
           </Link>
-        </li>
+        </li> */}
         <li>
           {/* <Link to="/"> */}
           <Link
